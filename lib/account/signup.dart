@@ -24,13 +24,13 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
                 ShaderMask(
                   shaderCallback: (Rect bounds) {
-                    return LinearGradient(
+                    return const LinearGradient(
                       colors: [Colors.pink, Colors.blue],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ).createShader(bounds);
                   },
-                  child: Text(
+                  child: const Text(
                     'Welcome to Verigender',
                     style: TextStyle(
                       fontSize: 24.0,
@@ -41,8 +41,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 16.0),
-                Text(
+                const SizedBox(height: 16.0),
+                const Text(
                   'If you have a Verigender Account,\nlog in with your email or phone number.',
                   style: TextStyle(
                     fontSize: 14.0,
@@ -51,17 +51,17 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 62.0),
+                const SizedBox(height: 46.0),
                 TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
                     hintText: 'Email or phone number',
-                    hintStyle: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
+                    hintStyle: const TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
@@ -72,18 +72,18 @@ class _SignUpPageState extends State<SignUpPage> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextFormField(
                   controller: _passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Password',
-                    hintStyle: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
+                    hintStyle: const TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
@@ -94,7 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     return null;
                   },
                 ),
-                SizedBox(height: 24.0),
+                const SizedBox(height: 24.0),
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
@@ -109,14 +109,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Log In',
                     style: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 ElevatedButton(
                   onPressed: () {
                     // Handle sign-up logic here
@@ -127,14 +127,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Sign Up',
                     style: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                   ),
                 ),
-                SizedBox(height: 24.0),
+                const SizedBox(height: 24.0),
                 TextButton(
                   onPressed: () {
                     // Navigate to "Find Verigender Account or Password" page
