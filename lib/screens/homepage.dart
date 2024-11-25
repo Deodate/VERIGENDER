@@ -12,12 +12,12 @@ class HomePage extends StatelessWidget {
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <g transform="translate(50,50) scale(1.2)">
     <!-- Female symbol (left) with text -->
-    <circle cx="100" cy="150" r="50" fill="none" stroke="black" stroke-width="20"/>
-    <path d="M100,200 L100,250 M75,225 L125,225" stroke="black" stroke-width="20" stroke-linecap="round"/>
-    <text x="100" y="165" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">Veri</text>
+    <circle cx="100" cy="240" r="50" fill="none" stroke="black" stroke-width="20"/>
+   <path d="M100,217 L100,267 M75,242 L125,242" stroke="black" stroke-width="20" stroke-linecap="round"/>
+    <text x="100" y="255" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">Veri</text>
     
     <!-- Male symbol (right) with text -->
-    <circle cx="170" cy="150" r="50" fill="none" stroke="black" stroke-width="20"/>
+    <circle cx="170" cy="190" r="50" fill="none" stroke="black" stroke-width="20"/>
     <!-- Up arrow with wider head like in reference -->
     <path d="M170,150 L170,80" stroke="black" stroke-width="20"/>
     <path d="M130,110 L170,60 L210,110" stroke="black" stroke-width="20" stroke-linecap="round" fill="none"/>
