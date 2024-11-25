@@ -13,9 +13,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.0.0  # Correct indentation for flutter_svg dependency
-
-  # Adds the Cupertino Icons font for iOS-style icons.
+  flutter_svg: ^1.0.0 
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
@@ -32,14 +30,9 @@ flutter:
   # To add assets, specify them under this section.
   assets:
     - lib/assets/VeriGender.png
-  # Additional asset examples can be added as needed, such as images or JSON files.
 
   # To add custom fonts to your application, specify them under fonts:
-  # fonts:
-  #   - family: YourFontFamily
-  #     fonts:
-  #       - asset: fonts/YourFont-Regular.ttf
-  #       - asset: fonts/YourFont-Bold.ttf
-  #         weight: 700
-
-  # For resolution-aware images, refer to the documentation on Flutter's image assets.
+  fonts:
+    - family: Times New Roman
+      fonts:
+        - asset: assets/fonts/TimesNewRoman.ttf

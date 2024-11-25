@@ -13,21 +13,21 @@ class HomePage extends StatelessWidget {
     <!-- Female symbol (left) with text -->
     <circle cx="100" cy="240" r="50" fill="none" stroke="black" stroke-width="20"/>
     <path d="M100,350 L100,300 M75,325 L125,325" stroke="black" stroke-width="20" stroke-linecap="round"/>
-    <text x="100" y="255" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">Veri</text>
+    <text x="100" y="255" text-anchor="middle" fill="black" font-family="Times New Roman" font-size="24" font-weight="bold">Veri</text>
     
     <!-- Male symbol (right) with text -->
     <circle cx="170" cy="190" r="50" fill="none" stroke="black" stroke-width="20"/>
     <!-- Up arrow with wider head like in reference -->
     <path d="M170,150 L170,70" stroke="black" stroke-width="20"/>
     <path d="M130,110 L170,60 L210,110" stroke="black" stroke-width="20" stroke-linecap="round" fill="none"/>
-    <text x="170" y="170" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
-  <tspan x="170" dy="0">G</tspan>
-  <tspan x="178" dy="15">e</tspan>
-  <tspan x="170" dy="28">n</tspan>
-  <tspan x="178" dy="42">d</tspan>
-  <tspan x="168" dy="52">e</tspan>
-  <tspan x="178" dy="62">r</tspan>
-</text>
+    <text x="170" y="170" text-anchor="middle" fill="black" font-family="Times New Roman" font-size="24" font-weight="bold">
+      <tspan x="170" dy="0">G</tspan>
+      <tspan x="178" dy="15">e</tspan>
+      <tspan x="170" dy="28">n</tspan>
+      <tspan x="178" dy="42">d</tspan>
+      <tspan x="168" dy="52">e</tspan>
+      <tspan x="178" dy="62">r</tspan>
+    </text>
   </g>
 </svg>
     ''';
@@ -47,11 +47,7 @@ class HomePage extends StatelessWidget {
         ),
         child: Center(
           child: Container(
-            padding: const EdgeInsets.all(20),
-            constraints: const BoxConstraints(
-              maxWidth: 300,
-              maxHeight: 300,
-            ),
+            padding: const EdgeInsets.only(left: 70, top: 50),  // Push SVG 10px from left and 50px from top
             child: SvgPicture.string(
               svgString,
               fit: BoxFit.contain,
