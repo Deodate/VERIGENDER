@@ -22,14 +22,15 @@ class HomePage extends StatelessWidget {
     <!-- Up arrow with wider head like in reference -->
     <path d="M170,150 L170,80" stroke="black" stroke-width="20"/>
     <path d="M130,110 L170,60 L210,110" stroke="black" stroke-width="20" stroke-linecap="round" fill="none"/>
-    <text x="170" y="130" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
-      <tspan x="170" dy="0">G</tspan>
-      <tspan x="170" dy="20">e</tspan>
-      <tspan x="170" dy="20">n</tspan>
-      <tspan x="170" dy="20">d</tspan>
-      <tspan x="170" dy="20">e</tspan>
-      <tspan x="170" dy="20">r</tspan>
-    </text>
+    <text x="170" y="175" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
+  <tspan x="170" dy="0">G</tspan>
+  <tspan x="170" dy="28">e</tspan>
+  <tspan x="170" dy="28">n</tspan>
+  <tspan x="170" dy="28">d</tspan>
+  <tspan x="170" dy="28">e</tspan>
+  <tspan x="170" dy="28">r</tspan>
+</text>
+
   </g>
 </svg>
     ''';
