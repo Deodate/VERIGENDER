@@ -7,23 +7,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Define the SVG string with gender icons
+    // Updated SVG string with closer gender icons
     const String svgString = '''
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-      <!-- Female symbol -->
-      <circle cx="150" cy="150" r="60" stroke="white" stroke-width="20" fill="none"/>
-      <line x1="150" y1="210" x2="150" y2="320" stroke="white" stroke-width="20"/>
-      <line x1="80" y1="280" x2="220" y2="280" stroke="white" stroke-width="20"/>
-      
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
       <!-- Male symbol -->
-      <circle cx="350" cy="250" r="60" stroke="white" stroke-width="20" fill="none"/>
-      <line x1="390" y1="210" x2="450" y2="150" stroke="white" stroke-width="20"/>
-      <line x1="400" y1="200" x2="450" y2="200" stroke="white" stroke-width="20"/>
-      <line x1="450" y1="150" x2="450" y2="200" stroke="white" stroke-width="20"/>
+      <circle cx="85" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M100 35 L115 20 M115 20 L115 35 M115 20 L100 20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+      
+      <!-- Female symbol -->
+      <circle cx="115" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <line x1="115" y1="70" x2="115" y2="85" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <line x1="100" y1="75" x2="130" y2="75" stroke="white" stroke-width="6" stroke-linecap="round"/>
       
       <!-- Text -->
-      <text x="200" y="400" fill="black" font-family="Arial" font-size="40">Veri</text>
-      <text x="280" y="400" fill="black" font-family="Arial" font-size="40">Gender</text>
+      <text x="70" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Veri</text>
+      <text x="130" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Gender</text>
     </svg>
     ''';
 
@@ -41,18 +39,19 @@ class HomePage extends StatelessWidget {
           Center(
             child: Container(
               padding: const EdgeInsets.all(20),
-              child: AspectRatio(
-                aspectRatio: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFF6a0dad), // Match background color
-                  ),
-                  padding: const EdgeInsets.all(15),
-                  child: SvgPicture.string(
-                    svgString,
-                    fit: BoxFit.contain,
-                  ),
+              constraints: const BoxConstraints(
+                maxWidth: 250, // Reduced maximum width
+                maxHeight: 150, // Maintain maximum height
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6a0dad),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                padding: const EdgeInsets.all(15),
+                child: SvgPicture.string(
+                  svgString,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
@@ -63,7 +62,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// StarPatternPainter class remains unchanged
 class StarPatternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
