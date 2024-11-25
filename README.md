@@ -1,16 +1,10 @@
 # verigender
 
 A new Flutter project.
+[1]. HOMEPAGE
 
-## Getting Started
+![image](https://github.com/user-attachments/assets/1baf16b4-4526-46ac-93af-164f7b8a2536)
 
-This project is a starting point for a Flutter application.
+[2]. LOGIN FORM
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/1410e3ef-b67e-4ba1-be88-2cfd449c82dd)
