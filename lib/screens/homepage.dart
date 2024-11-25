@@ -18,16 +18,16 @@ class HomePage extends StatelessWidget {
     <!-- Male symbol (right) with text -->
     <circle cx="170" cy="190" r="50" fill="none" stroke="black" stroke-width="20"/>
     <!-- Up arrow with wider head like in reference -->
-    <path d="M170,150 L170,80" stroke="black" stroke-width="20"/>
+    <path d="M170,150 L170,70" stroke="black" stroke-width="20"/>
     <path d="M130,110 L170,60 L210,110" stroke="black" stroke-width="20" stroke-linecap="round" fill="none"/>
     <text x="170" y="175" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
-      <tspan x="170" dy="0">G</tspan>
-      <tspan x="170" dy="28">e</tspan>
-      <tspan x="170" dy="28">n</tspan>
-      <tspan x="170" dy="28">d</tspan>
-      <tspan x="170" dy="28">e</tspan>
-      <tspan x="170" dy="28">r</tspan>
-    </text>
+  <tspan x="170" dy="0">G</tspan>
+  <tspan x="170" dy="14">e</tspan>
+  <tspan x="170" dy="14">n</tspan>
+  <tspan x="170" dy="14">d</tspan>
+  <tspan x="170" dy="14">e</tspan>
+  <tspan x="170" dy="">r</tspan>
+</text>
   </g>
 </svg>
     ''';
@@ -39,8 +39,8 @@ class HomePage extends StatelessWidget {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             colors: [
-              Color(0xFFFF69B4),  // Pink
-              Color(0xFF1E90FF),  // Blue
+              Color(0xFFFF69B4), // Pink
+              Color(0xFF1E90FF), // Blue
             ],
             stops: [0.0, 1.0],
           ),
