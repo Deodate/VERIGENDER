@@ -1,14 +1,34 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key, required String title}) : super(key: key);
+  const HomePage({super.key, required String title});
 
   @override
   Widget build(BuildContext context) {
+    // Define the SVG string with gender icons
+    const String svgString = '''
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+      <!-- Female symbol -->
+      <circle cx="150" cy="150" r="60" stroke="white" stroke-width="20" fill="none"/>
+      <line x1="150" y1="210" x2="150" y2="320" stroke="white" stroke-width="20"/>
+      <line x1="80" y1="280" x2="220" y2="280" stroke="white" stroke-width="20"/>
+      
+      <!-- Male symbol -->
+      <circle cx="350" cy="250" r="60" stroke="white" stroke-width="20" fill="none"/>
+      <line x1="390" y1="210" x2="450" y2="150" stroke="white" stroke-width="20"/>
+      <line x1="400" y1="200" x2="450" y2="200" stroke="white" stroke-width="20"/>
+      <line x1="450" y1="150" x2="450" y2="200" stroke="white" stroke-width="20"/>
+      
+      <!-- Text -->
+      <text x="200" y="400" fill="black" font-family="Arial" font-size="40">Veri</text>
+      <text x="280" y="400" fill="black" font-family="Arial" font-size="40">Gender</text>
+    </svg>
+    ''';
+
     return Scaffold(
-      backgroundColor: const Color(0xFF6a0dad), // Purple background from the hex code
+      backgroundColor: const Color(0xFF6a0dad), // Purple background
       body: Stack(
         children: [
           // Background stars pattern
@@ -26,11 +46,11 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white12, // Slight white overlay for the circle
+                    color: Color(0xFF6a0dad), // Match background color
                   ),
                   padding: const EdgeInsets.all(15),
-                  child: Image.asset(
-                    'lib/assets/VeriGender.png', // Make sure to add the logo to your assets
+                  child: SvgPicture.string(
+                    svgString,
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -43,15 +63,14 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// Custom painter for the star pattern background
+// StarPatternPainter class remains unchanged
 class StarPatternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFF5a0b9d) // Slightly darker purple for stars
+      ..color = const Color(0xFF5a0b9d)
       ..style = PaintingStyle.fill;
 
-    // Draw stars at fixed positions
     final starPositions = [
       Offset(size.width * 0.2, size.height * 0.2),
       Offset(size.width * 0.8, size.height * 0.3),
@@ -69,7 +88,7 @@ class StarPatternPainter extends CustomPainter {
 
   void drawStar(Canvas canvas, Offset center, double size, Paint paint) {
     final path = Path();
-    final angleStep = 2 * 3.14159 / 5;
+    const angleStep = 2 * 3.14159 / 5;
     final halfAngleStep = angleStep / 2;
 
     for (var i = -3.14159 / 2; i < 3.14159 * 1.5; i += angleStep) {
