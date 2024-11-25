@@ -9,20 +9,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Updated SVG string with closer gender icons
     const String svgString = '''
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-      <!-- Male symbol -->
-      <circle cx="85" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <path d="M100 35 L115 20 M115 20 L115 35 M115 20 L100 20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-      
-      <!-- Female symbol -->
-      <circle cx="115" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <line x1="115" y1="70" x2="115" y2="85" stroke="white" stroke-width="6" stroke-linecap="round"/>
-      <line x1="100" y1="75" x2="130" y2="75" stroke="white" stroke-width="6" stroke-linecap="round"/>
-      
-      <!-- Text -->
-      <text x="70" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Veri</text>
-      <text x="130" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Gender</text>
-    </svg>
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <!-- Male symbol -->
+  <circle cx="85" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M100 30 L115 15 M115 15 L115 30 M115 15 L100 15" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Female symbol -->
+  <circle cx="115" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <line x1="115" y1="70" x2="115" y2="105" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="90" x2="130" y2="90" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="70" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Veri</text>
+  <text x="130" y="85" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Gender</text>
+</svg>
     ''';
 
     return Scaffold(
