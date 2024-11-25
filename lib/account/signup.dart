@@ -22,21 +22,32 @@ class _SignUpPageState extends State<SignUpPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  'Welcome to Verigender',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                ShaderMask(
+                  shaderCallback: (Rect bounds) {
+                    return LinearGradient(
+                      colors: [Colors.pink, Colors.blue],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ).createShader(bounds);
+                  },
+                  child: Text(
+                    'Welcome to Verigender',
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Times New Roman', // Font family applied
+                      color: Colors.white, // Required for ShaderMask to work
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16.0), // Added more spacing between the title and subtitle
+                SizedBox(height: 16.0),
                 Text(
                   'If you have a Verigender Account,\nlog in with your email or phone number.',
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Colors.black54,
+                    fontFamily: 'Times New Roman', // Font family applied
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -45,11 +56,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   controller: _emailController,
                   decoration: InputDecoration(
                     hintText: 'Email or phone number',
+                    hintStyle: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0), // Blue border on focus
+                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
@@ -66,11 +78,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Password',
+                    hintStyle: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0), // Blue border on focus
+                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
@@ -98,7 +111,10 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                   ),
-                  child: Text('Log In'),
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
+                  ),
                 ),
                 SizedBox(height: 16.0),
                 ElevatedButton(
@@ -113,18 +129,22 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                   ),
-                  child: Text('Sign Up'),
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(fontFamily: 'Times New Roman'), // Font family applied
+                  ),
                 ),
                 SizedBox(height: 24.0),
                 TextButton(
                   onPressed: () {
                     // Navigate to "Find Verigender Account or Password" page
                   },
-                  child: Text(
+                  child: const Text(
                     'Find Verigender Account or Password',
                     style: TextStyle(
-                      fontSize: 15.0, // Adjusted font size to 15px
+                      fontSize: 15.0,
                       color: Colors.black54,
+                      fontFamily: 'Times New Roman', // Font family applied
                     ),
                   ),
                 ),
