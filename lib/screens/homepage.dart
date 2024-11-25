@@ -9,11 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Updated SVG string with connected gender icons and internal text
     const String svgString = '''
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
   <g transform="translate(50,50) scale(1.2)">
     <!-- Female symbol (left) with text -->
     <circle cx="100" cy="240" r="50" fill="none" stroke="black" stroke-width="20"/>
-   <path d="M100,217 L100,267 M75,242 L125,242" stroke="black" stroke-width="20" stroke-linecap="round"/>
+     <path d="M100,350 L100,300 M75,325 L125,325" stroke="black" stroke-width="20" stroke-linecap="round"/>
+
     <text x="100" y="255" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">Veri</text>
     
     <!-- Male symbol (right) with text -->
