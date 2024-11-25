@@ -18,7 +18,9 @@ class HomePage extends StatelessWidget {
     
     <!-- Male symbol (right) with text -->
     <circle cx="170" cy="150" r="50" fill="none" stroke="black" stroke-width="20"/>
-    <path d="M170,100 L170,60 M145,85 L195,85" stroke="black" stroke-width="20" stroke-linecap="round" transform="rotate(180 170 85)"/>
+    <!-- Up arrow with wider head like in reference -->
+    <path d="M170,150 L170,80" stroke="black" stroke-width="20"/>
+    <path d="M130,110 L170,60 L210,110" stroke="black" stroke-width="20" stroke-linecap="round" fill="none"/>
     <text x="170" y="130" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
       <tspan x="170" dy="0">G</tspan>
       <tspan x="170" dy="20">e</tspan>
