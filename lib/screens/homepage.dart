@@ -7,21 +7,27 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Updated SVG string with closer gender icons
+    // Updated SVG string with connected gender icons and internal text
     const String svgString = '''
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-  <!-- Male symbol -->
-  <circle cx="85" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <path d="M100 30 L115 15 M115 15 L115 30 M115 15 L100 15" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-  
-  <!-- Female symbol -->
-  <circle cx="115" cy="50" r="20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <line x1="115" y1="70" x2="115" y2="105" stroke="white" stroke-width="6" stroke-linecap="round"/>
-  <line x1="100" y1="90" x2="130" y2="90" stroke="white" stroke-width="6" stroke-linecap="round"/>
-
-  <!-- Text -->
-  <text x="70" y="95" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Veri</text>
-  <text x="130" y="85" fill="white" font-family="Arial" font-size="16" text-anchor="middle">Gender</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <g transform="translate(50,50) scale(1.2)">
+    <!-- Female symbol (left) with text -->
+    <circle cx="100" cy="150" r="50" fill="none" stroke="black" stroke-width="20"/>
+    <path d="M100,200 L100,250 M75,225 L125,225" stroke="black" stroke-width="20" stroke-linecap="round"/>
+    <text x="100" y="165" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">Veri</text>
+    
+    <!-- Male symbol (right) with text -->
+    <circle cx="170" cy="150" r="50" fill="none" stroke="black" stroke-width="20"/>
+    <path d="M170,100 L170,60 M145,85 L195,85" stroke="black" stroke-width="20" stroke-linecap="round" transform="rotate(180 170 85)"/>
+    <text x="170" y="130" text-anchor="middle" fill="black" font-family="Arial" font-size="24" font-weight="bold">
+      <tspan x="170" dy="0">G</tspan>
+      <tspan x="170" dy="20">e</tspan>
+      <tspan x="170" dy="20">n</tspan>
+      <tspan x="170" dy="20">d</tspan>
+      <tspan x="170" dy="20">e</tspan>
+      <tspan x="170" dy="20">r</tspan>
+    </text>
+  </g>
 </svg>
     ''';
 
@@ -40,8 +46,8 @@ class HomePage extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               constraints: const BoxConstraints(
-                maxWidth: 250, // Reduced maximum width
-                maxHeight: 150, // Maintain maximum height
+                maxWidth: 300,
+                maxHeight: 300,
               ),
               child: Container(
                 decoration: BoxDecoration(
