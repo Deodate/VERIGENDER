@@ -1,9 +1,28 @@
-import 'dart:math';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:verigender/account/signup.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key, required String title});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
+  final String title;
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    // Navigate to SignUpPage after 2 seconds
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => SignUpPage()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +66,7 @@ class HomePage extends StatelessWidget {
         ),
         child: Center(
           child: Container(
-            padding: const EdgeInsets.only(left: 70, top: 50),  // Push SVG 10px from left and 50px from top
+            padding: const EdgeInsets.only(left: 70, top: 50),
             child: SvgPicture.string(
               svgString,
               fit: BoxFit.contain,
